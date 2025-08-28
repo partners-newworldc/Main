@@ -1,226 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation of Email Change - Memoryan</title>
-    <style>
-        /* Same base styles as above with purple gradient for email change */
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #0F1017 0%, #252834 50%, #07070C 100%);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #F2FAFF;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .card {
-            background: rgba(26, 26, 38, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        .logo {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .logo img {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .header h1 {
-            color: #F2FAFF;
-            font-size: 28px;
-            font-weight: 700;
-            margin: 0;
-            margin-bottom: 10px;
-        }
-        .header p {
-            color: rgba(242, 250, 255, 0.7);
-            font-size: 16px;
-            margin: 0;
-        }
-        .otp-section {
-            background: linear-gradient(135deg, #9333EA 0%, #7C3AED 100%);
-            border-radius: 16px;
-            padding: 30px;
-            text-align: center;
-            margin: 30px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        .otp-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .otp-label {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .otp-code {
-            color: #FFFFFF;
-            font-size: 36px;
-            font-weight: 800;
-            letter-spacing: 8px;
-            margin: 0;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            position: relative;
-            z-index: 1;
-        }
-        .content {
-            margin: 30px 0;
-        }
-        .content p {
-            color: rgba(242, 250, 255, 0.8);
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        .email-box {
-            background: rgba(147, 51, 234, 0.1);
-            border: 1px solid rgba(147, 51, 234, 0.3);
-            border-radius: 12px;
-            padding: 16px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        .email-box p {
-            color: #9333EA;
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-        }
-        .warning-box {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 12px;
-            padding: 16px;
-            margin: 20px 0;
-        }
-        .warning-box p {
-            color: #EF4444;
-            font-size: 14px;
-            margin: 0;
-            display: flex;
-            align-items: center;
-        }
-        .warning-box .icon {
-            margin-right: 8px;
-            font-size: 16px;
-        }
-        .info-box {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            border-radius: 12px;
-            padding: 16px;
-            margin: 20px 0;
-        }
-        .info-box p {
-            color: #3B82F6;
-            font-size: 14px;
-            margin: 0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .footer p {
-            color: rgba(242, 250, 255, 0.5);
-            font-size: 14px;
-            margin: 5px 0;
-        }
-        .footer a {
-            color: #3B82F6;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px 10px;
-            }
-            .card {
-                padding: 30px 20px;
-            }
-            .otp-code {
-                font-size: 28px;
-                letter-spacing: 4px;
-            }
-            .header h1 {
-                font-size: 24px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New World Capital — Консалтинг по зарубежной недвижимости</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .font-serif{font-family:'Playfair Display',serif}
+    body{font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial}
+    .shadow-premium{box-shadow:0 10px 30px -10px rgba(30,41,59,.15)}
+  </style>
 </head>
-<body>
-    <div class="container">
-        <div class="card">
-            <div class="logo">
-                <img src="https://mymemoryan.com/images/memoryan-logo.png" alt="Memoryan Logo">
-            </div>
-            
-            <div class="header">
-                <h1>📧 Confirm this change</h1>
-                <p>Verify your actions</p>
-            </div>
-            
-            <div class="email-box">
-                <p>{{NEW_EMAIL}}</p>
-            </div>
-            
-            <div class="otp-section">
-                <div class="otp-label">Verification Code</div>
-                <div class="otp-code">{{OTP_CODE}}</div>
-            </div>
-            
-            <div class="content">
-                <p>Hello,</p>
-                <p>You requested to change your email address for your Memoryan account. Use this code to complete that action.</p>
-                
-                <div class="warning-box">
-                    <p><span class="icon">⏰</span> This code will expire in 15 minutes for security reasons.</p>
-                </div>
-                
-                <div class="info-box">
-                    <p><strong>Note:</strong> After verification, all future communications will be sent to this new email address. Make sure you have access to it.</p>
-                </div>
-                
-                <p>If you didn't request this email change, please contact our support team immediately to secure your account.</p>
-            </div>
-            
-            <div class="footer">
-                <p>© 2025 Memoryan. All rights reserved.</p>
-                <p>
-                    <a href="mailto:info@mymemoryan.com">Contact Support</a> | 
-                    <a href="https://mymemoryan.com">Visit Website</a>
-                </p>
-                <p>This is an automated message, please do not reply to this email.</p>
-            </div>
+<body class="min-h-screen bg-[#F7FAFC] text-slate-900">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/60 border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="h-8 w-8 rounded-xl bg-gradient-to-br from-sky-400 to-indigo-500"></div>
+          <div class="font-serif text-xl tracking-tight">New World Capital</div>
         </div>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#why" class="hover:text-slate-600 transition">Почему мы</a>
+          <a href="#segments" class="hover:text-slate-600 transition">Сегменты</a>
+          <a href="#roi" class="hover:text-slate-600 transition">ROI-карточки</a>
+          <a href="#partners" class="hover:text-slate-600 transition">Партнёрам</a>
+          <a href="#form" class="px-4 py-2 rounded-full bg-slate-900 text-white hover:bg-slate-800 transition">Записаться</a>
+        </nav>
+      </div>
     </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-gradient-to-tr from-sky-200 via-cyan-100 to-white blur-3xl opacity-70"></div>
+      <div class="absolute -bottom-24 -left-24 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-indigo-100 via-sky-100 to-white blur-3xl opacity-70"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Инвестиционный консалтинг в зарубежной недвижимости</p>
+          <h1 class="mt-4 font-serif text-4xl sm:text-5xl leading-tight">
+            Не продаём объекты. <span class="whitespace-nowrap">Создаём стратегию</span> и защищаем ваш капитал
+          </h1>
+          <p class="mt-5 text-slate-700 max-w-2xl">
+            Независимая аналитика рынков (ОАЭ, Азия, Европа, США), оценка застройщиков и проектов, расчёты ROI/IRR, сценарии и подбор под цели. Премиальный светло-синий стиль — чисто, структурно, без визуального шума.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3" id="cta">
+            <a class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-white hover:bg-slate-800 transition shadow-lg shadow-slate-900/10" href="#form">Записаться на консультацию</a>
+            <a class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 hover:bg-white transition" href="#why">Узнать больше</a>
+          </div>
+          <div class="mt-8 text-xs text-slate-500">Первичные консультации: $350 · Пакеты: $500–$2,500</div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-premium">
+            <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-sky-50 to-white"></div>
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-500"></div>
+              <div class="font-serif text-lg">Премиальная подача</div>
+            </div>
+            <ul class="mt-6 space-y-3 text-sm text-slate-700">
+              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500"></span>Рынки и районы — индексы, динамика, планы инфраструктуры</li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500"></span>Оценка девелопера по надёжности и истории проектов</li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500"></span>ROI/IRR/ликвидность + сценарии под горизонт и риск-профиль</li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500"></span>Независимо от брокеров. Мы за стратегию и защиту капитала</li>
+            </ul>
+            <div class="mt-6 grid grid-cols-3 gap-2">
+              <div class="h-16 rounded-xl bg-gradient-to-br from-sky-200 to-cyan-300"></div>
+              <div class="h-16 rounded-xl bg-gradient-to-br from-indigo-100 to-sky-100"></div>
+              <div class="h-16 rounded-xl bg-gradient-to-br from-slate-100 to-white"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+    <div class="grid lg:grid-cols-12 gap-10 items-start">
+      <div class="lg:col-span-5">
+        <h2 class="font-serif text-3xl">Почему платный консалтинг, а не брокер</h2>
+        <p class="mt-4 text-slate-700">Точная картина рынка, расчёты доходности и рисков, независимая оценка объектов. Мы экономим месяцы и защищаем от ошибок стоимостью в сотни тысяч.</p>
+      </div>
+      <div class="lg:col-span-7">
+        <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div class="grid sm:grid-cols-2">
+            <div class="p-6 sm:p-8 border-b sm:border-b-0 sm:border-r border-slate-200">
+              <div class="text-sm font-medium uppercase tracking-wider text-slate-500">Консалтинг</div>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>ROI/IRR, ликвидность, сценарии</li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Независимость от продаж</li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Сравнение стран/городов/районов</li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Чек-листы, таблицы, отчёты PDF</li>
+              </ul>
+            </div>
+            <div class="p-6 sm:p-8">
+              <div class="text-sm font-medium uppercase tracking-wider text-slate-500">Типичный брокер</div>
+              <ul class="mt-4 space-y-3 text-sm text-slate-700">
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400"></span>Фокус на продаже конкретного объекта</li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400"></span>Поверхностные аргументы</li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400"></span>Нет стратегии и сценариев</li>
+                <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400"></span>Ограниченный пул застройщиков</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENTS -->
+  <section id="segments" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-6">
+    <h2 class="font-serif text-3xl mb-8">Сегменты первой страницы</h2>
+    <div class="grid lg:grid-cols-3 gap-6">
+      <article class="relative overflow-hidden rounded-3xl border border-sky-200 bg-gradient-to-b from-sky-50 to-white shadow-lg">
+        <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-sky-200 blur-2xl opacity-60"></div>
+        <div class="p-7">
+          <div class="text-xs uppercase tracking-[0.2em] text-sky-700">Защита</div>
+          <h3 class="mt-2 font-serif text-2xl">Спокойствие и сохранение капитала</h3>
+          <p class="mt-2 text-sm text-slate-700">Мягкая эстетика. Объекты и рынки, переживающие кризисы. Показатели риска и устойчивости.</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-600"></span>Юрисдикции с низкими регуляторными рисками</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-600"></span>Аналитика ликвидности / волатильности</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-600"></span>Due diligence девелопера</li>
+          </ul>
+        </div>
+      </article>
+      <article class="relative overflow-hidden rounded-3xl border border-slate-300 bg-gradient-to-b from-slate-50 to-white shadow-lg">
+        <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-slate-200 blur-2xl opacity-60"></div>
+        <div class="p-7">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-600">Контроль</div>
+          <h3 class="mt-2 font-serif text-2xl">Структура, прозрачность, дисциплина</h3>
+          <p class="mt-2 text-sm text-slate-700">Холодная палитра, архитектурные линии, строгая сетка. Чёткие метрики и управляемые риски.</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-slate-700"></span>Отчёты уровня инвест-бутика</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-slate-700"></span>Дашборды и трекинг сделок</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-slate-700"></span>Стандарты принятия решений (IC memo)</li>
+          </ul>
+        </div>
+      </article>
+      <article class="relative overflow-hidden rounded-3xl border border-amber-200 bg-gradient-to-b from-amber-50 to-white shadow-lg">
+        <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-amber-200 blur-2xl opacity-60"></div>
+        <div class="p-7">
+          <div class="text-xs uppercase tracking-[0.2em] text-amber-700">Единение</div>
+          <h3 class="mt-2 font-serif text-2xl">Дом, семья, тёплый сервис</h3>
+          <p class="mt-2 text-sm text-slate-700">Натуральные оттенки, забота. Решения для жизни: переезд, инфраструктура, аренда с низкой вовлечённостью.</p>
+          <ul class="mt-4 space-y-2 text-sm">
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-amber-700"></span>Подбор районов под образ жизни</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-amber-700"></span>Сервис-пакет «под ключ»</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-amber-700"></span>Арендная стратегия</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ROI CARDS -->
+  <section id="roi" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+    <div class="flex items-end justify-between gap-6 flex-wrap">
+      <h2 class="font-serif text-3xl">Примеры карточек объектов: ROI-кейсы</h2>
+      <div class="text-xs text-slate-500">Данные — иллюстративные. Формат карточек для сайта/ЛК.</div>
+    </div>
+    <div class="mt-8 grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+      <!-- Card template repeated -->
+      <article class="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-premium">
+        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-tr from-sky-100 to-white blur-2xl"></div>
+        <div class="p-6">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-500">Дубай · Dubai Marina</div>
+          <h3 class="mt-2 font-serif text-2xl">1-bed апартаменты · 58 м²</h3>
+          <div class="mt-3 grid grid-cols-3 gap-3 text-sm">
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">Цена</div><div class="font-medium">$420,000</div></div>
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">Доходность</div><div class="font-medium">7.8% net</div></div>
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">IRR</div><div class="font-medium">13–15% IRR</div></div>
+          </div>
+          <div class="mt-3 flex items-center gap-2 text-xs">
+            <span class="rounded-full bg-sky-600/10 text-sky-700 px-2.5 py-1 border border-sky-200">Риск: Низкий</span>
+            <span class="rounded-full bg-slate-900 text-white px-2.5 py-1">ROI-калькулятор</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Арендный пул оператора</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Девелопер Tier-1</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Близость к метро/Marina Walk</li>
+          </ul>
+          <div class="mt-5 flex gap-3">
+            <a class="rounded-full bg-slate-900 px-5 py-2 text-white text-sm hover:bg-slate-800" href="#">Запросить подбор</a>
+            <a class="rounded-full border border-slate-300 px-5 py-2 text-sm hover:bg-white" href="#">Скачать аналитический лист</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-premium">
+        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-tr from-sky-100 to-white blur-2xl"></div>
+        <div class="p-6">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-500">Португалия · Лиссабон</div>
+          <h3 class="mt-2 font-serif text-2xl">Студия под аренду · 42 м²</h3>
+          <div class="mt-3 grid grid-cols-3 gap-3 text-sm">
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">Цена</div><div class="font-medium">€310,000</div></div>
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">Доходность</div><div class="font-medium">6.2% net</div></div>
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">IRR</div><div class="font-medium">10–12% IRR</div></div>
+          </div>
+          <div class="mt-3 flex items-center gap-2 text-xs">
+            <span class="rounded-full bg-sky-600/10 text-sky-700 px-2.5 py-1 border border-sky-200">Риск: Средний</span>
+            <span class="rounded-full bg-slate-900 text-white px-2.5 py-1">ROI-калькулятор</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>AL‑лицензия</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Исторический центр</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Капремонт 2022</li>
+          </ul>
+          <div class="mt-5 flex gap-3">
+            <a class="rounded-full bg-slate-900 px-5 py-2 text-white text-sm hover:bg-slate-800" href="#">Запросить подбор</a>
+            <a class="rounded-full border border-slate-300 px-5 py-2 text-sm hover:bg-white" href="#">Скачать аналитический лист</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-premium">
+        <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gradient-to-tr from-sky-100 to-white blur-2xl"></div>
+        <div class="p-6">
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-500">Таиланд · Пхукет</div>
+          <h3 class="mt-2 font-serif text-2xl">Resort unit · 65 м²</h3>
+          <div class="mt-3 grid grid-cols-3 gap-3 text-sm">
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">Цена</div><div class="font-medium">$340,000</div></div>
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">Доходность</div><div class="font-medium">8.1% net</div></div>
+            <div class="rounded-2xl border border-slate-200 p-3"><div class="text-xs text-slate-500">IRR</div><div class="font-medium">12–14% IRR</div></div>
+          </div>
+          <div class="mt-3 flex items-center gap-2 text-xs">
+            <span class="rounded-full bg-sky-600/10 text-sky-700 px-2.5 py-1 border border-sky-200">Риск: Средний</span>
+            <span class="rounded-full bg-slate-900 text-white px-2.5 py-1">ROI-калькулятор</span>
+          </div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Пул‑управление</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Заполняемость 78%</li>
+            <li class="flex gap-2"><span class="mt-2 h-1.5 w-1.5 rounded-full bg-sky-500"></span>Отельная инфраструктура</li>
+          </ul>
+          <div class="mt-5 flex gap-3">
+            <a class="rounded-full bg-slate-900 px-5 py-2 text-white text-sm hover:bg-slate-800" href="#">Запросить подбор</a>
+            <a class="rounded-full border border-slate-300 px-5 py-2 text-sm hover:bg-white" href="#">Скачать аналитический лист</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PARTNER LANDING (сокращённо) -->
+  <section id="partners" class="bg-white border-y">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Партнёрская сеть</p>
+          <h2 class="mt-3 font-serif text-4xl">Международная партнёрская сеть по передаче клиентов</h2>
+          <p class="mt-4 text-slate-700 max-w-2xl">Истинная ценность — в возможностях, которые вы открываете для своих клиентов. Дайте им доступ к лучшим мировым решениям через единую платформу на принципах доверия, экспертизы и конфиденциальности.</p>
+          <div class="mt-6"><a class="rounded-full bg-slate-900 px-6 py-3 text-white hover:bg-slate-800" href="#form">Стать партнёром</a></div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="h-64 rounded-3xl border border-slate-200 bg-gradient-to-br from-sky-50 to-white shadow-premium"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FOOTER -->
+  <footer class="border-t bg-white" id="form">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <h3 class="font-serif text-3xl">Готовы принять решение на основе данных?</h3>
+          <p class="mt-3 text-slate-700">Оставьте заявку — пришлём мини-чек-лист, запланируем встречу и вышлем примеры отчётов.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="rounded-full bg-slate-900 px-6 py-3 text-white hover:bg-slate-800 transition shadow-lg shadow-slate-900/10" href="#">Оставить заявку</a>
+            <a class="rounded-full border border-slate-300 px-6 py-3 hover:bg-white" href="#">Смотреть образец отчёта (PDF)</a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-xs uppercase tracking-[0.2em] text-slate-500">Контакты</div>
+            <div class="mt-3 text-sm text-slate-700 space-y-2">
+              <div>Telegram / WhatsApp: @newworldcapital</div>
+              <div>Email: consulting@nwc.example</div>
+              <div>Европа · ОАЭ · Азия · США</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 flex items-center justify-between text-xs text-slate-500">
+        <div>© <span id="year"></span> New World Capital</div>
+        <div class="flex items-center gap-3">
+          <span class="h-2 w-2 rounded-full bg-sky-500"></span>
+          <span class="h-2 w-2 rounded-full bg-slate-400"></span>
+          <span class="h-2 w-2 rounded-full bg-amber-500"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
 </html>
